@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.Recorders", "NatSuite.Recorders.csproj", "{559d9cf9-0fad-2379-391b-7c743fbb20fa}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.ML", "NatSuite.ML.csproj", "{5582fa2a-15d8-960d-4651-7e0942761731}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.Devices", "NatSuite.Devices.csproj", "{974acaed-8b0a-0731-a9a9-6949cc67bb3b}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.Recorders", "NatSuite.Recorders.csproj", "{559d9cf9-0fad-2379-391b-7c743fbb20fa}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{b13ec436-33d4-a199-c3e4-9b450027a4bf}"
 EndProject
@@ -16,12 +16,12 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{559d9cf9-0fad-2379-391b-7c743fbb20fa}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559d9cf9-0fad-2379-391b-7c743fbb20fa}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5582fa2a-15d8-960d-4651-7e0942761731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5582fa2a-15d8-960d-4651-7e0942761731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{974acaed-8b0a-0731-a9a9-6949cc67bb3b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{974acaed-8b0a-0731-a9a9-6949cc67bb3b}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{559d9cf9-0fad-2379-391b-7c743fbb20fa}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{559d9cf9-0fad-2379-391b-7c743fbb20fa}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b13ec436-33d4-a199-c3e4-9b450027a4bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b13ec436-33d4-a199-c3e4-9b450027a4bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04ef59a1-cf60-df5c-d92d-d2dd20f60787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

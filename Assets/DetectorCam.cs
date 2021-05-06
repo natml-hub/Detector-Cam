@@ -5,7 +5,6 @@
 
 namespace NatSuite.Examples {
 
-    using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
     using Devices;
@@ -13,7 +12,6 @@ namespace NatSuite.Examples {
     using ML.Predictors;
     using ML.Vision;
     using ML.Visualizers;
-    using Recorders;
 
     public class DetectorCam : MonoBehaviour {
 
@@ -48,6 +46,9 @@ namespace NatSuite.Examples {
         }
 
         async void Update () {
+            // Check if the camera has started
+            if (!previewTexture)
+                return;
             // Check if the predictor is ready
             if (!predictor.readyForPrediction)
                 return;
@@ -60,6 +61,15 @@ namespace NatSuite.Examples {
                 visualizations.Add((rect, visualizationText));
             }
             visualizer.Render(previewTexture, visualizations.ToArray());
+        }
+
+        void OnDisable () {
+            // Dispose the predictor and model
+            predictor?.Dispose();
+            model?.Dispose();
+            // Stop the camera preview
+            if (cameraDevice?.running ?? false)
+                cameraDevice.StopRunning();
         }
     }
 }

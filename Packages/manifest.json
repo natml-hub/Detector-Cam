@@ -38,6 +38,7 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.natsuite.nmlx": "git+https://github.com/natsuite/NatML-Extensions"
+    "com.natsuite.nmlx": "git+https://github.com/natsuite/NatML-Extensions",
+    "com.natsuite.natshare": "git+https://github.com/natsuite/NatShare"
   }
 }
