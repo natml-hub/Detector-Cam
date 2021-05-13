@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DetectorCam.cs" />
-     <Compile Include="Assets\Utils\Recorder.cs" />
      <None Include="Assets\coco_classes.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -613,10 +612,6 @@
     <ProjectReference Include="NatSuite.ML.Editor.csproj">
       <Project>{04ef59a1-cf60-df5c-d92d-d2dd20f60787}</Project>
       <Name>NatSuite.ML.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NatSuite.Recorders.csproj">
-      <Project>{559d9cf9-0fad-2379-391b-7c743fbb20fa}</Project>
-      <Name>NatSuite.Recorders</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
