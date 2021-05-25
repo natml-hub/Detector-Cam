@@ -6,22 +6,19 @@ This is an example project which integrates the NatML machine learning runtime w
 
 ## Requirements
 - Unity 2019.2+
-- NatML 1.0+
-- NatDevice 1.1+
-
-This project also uses the following open-source libraries:
-- [NatML Extensions](https://github.com/natsuite/NatML-Extensions)
-- [NatShare](https://github.com/natsuite/NatShare)
+- [ML Detector 1.0+](https://github.com/natsuite/ML-Detector)
+- [NatDevice 1.1+](https://assetstore.unity.com/packages/tools/integration/natdevice-media-device-api-162053)
+- [NatShare 1.2+](https://github.com/natsuite/NatShare)
 
 ## Supported Platforms
-- Android API level 24+
+- Android API level 24+ (Android Nougat or newer)
 - iOS 13+
 - macOS 10.15+
 - Windows 10 (64-bit)
 
 ## Quick Tips
 - [Join the NatML Beta waitlist](https://yusuf987639.typeform.com/to/dIL3bL2f)
-- [Join the NatSuite Discord](https://discord.gg/aVXUqeEp3e)
-- Contact me at [hi@natsuite.io](mailto:hi@natsuite.io) for support, custom ML models, and more.
+- [Join the NatSuite community on Discord](https://discord.gg/aVXUqeEp3e)
+- Email us at [hi@natsuite.io](mailto:hi@natsuite.io)
 
 Thank you very much!

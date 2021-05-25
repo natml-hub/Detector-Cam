@@ -1,18 +1,18 @@
 {
   "dependencies": {
+    "com.natsuite.ml.detector": {
+      "version": "git+https://github.com/natsuite/ML-Detector",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e332a8a37c0f31e9da18f7cef73f0b9242156c2e"
+    },
     "com.natsuite.natshare": {
       "version": "git+https://github.com/natsuite/NatShare",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "46e0ec009f8a9833e3e88881e934fa6fcce43beb"
-    },
-    "com.natsuite.nmlx": {
-      "version": "git+https://github.com/natsuite/NatML-Extensions",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "9487f83eaa44ef47b79f9596c27a21bd23c35665"
     },
     "com.unity.collab-proxy": {
       "version": "1.2.16",

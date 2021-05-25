@@ -9,9 +9,9 @@ namespace NatSuite.Examples {
     using UnityEngine;
     using Devices;
     using ML;
-    using ML.Predictors;
     using ML.Vision;
     using ML.Visualizers;
+    using ML.Extensions;
 
     public class DetectorCam : MonoBehaviour {
 
@@ -23,12 +23,12 @@ namespace NatSuite.Examples {
 
         MLModel model;
         MLAsyncPredictor<(string, Rect, float)[]> predictor;
-        ICameraDevice cameraDevice;
-        private Texture2D previewTexture;
+        CameraDevice cameraDevice;
+        Texture2D previewTexture;
 
         async void Start () {
             // Request camera permissions
-            if (!await MediaDeviceQuery.RequestPermissions<ICameraDevice>()) {
+            if (!await MediaDeviceQuery.RequestPermissions<CameraDevice>()) {
                 Debug.LogError(@"User did not grant camera permissions");
                 return;
             }
@@ -36,8 +36,8 @@ namespace NatSuite.Examples {
             model = modelData.Deserialize();
             predictor = new TinyYOLOv3Predictor(model, modelData.labels).ToAsync();
             // Get the default camera device
-            var query = new MediaDeviceQuery(MediaDeviceCriteria.GenericCameraDevice);
-            cameraDevice = query.current as ICameraDevice;
+            var query = new MediaDeviceQuery(MediaDeviceCriteria.CameraDevice);
+            cameraDevice = query.current as CameraDevice;
             // Start the camera preview
             cameraDevice.previewResolution = (1280, 720);
             previewTexture = await cameraDevice.StartRunning();
