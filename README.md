@@ -17,8 +17,9 @@ This is an example project which integrates the NatML machine learning runtime w
 - Windows 10 (64-bit)
 
 ## Quick Tips
-- [Join the NatML Beta waitlist](https://yusuf987639.typeform.com/to/dIL3bL2f)
-- [Join the NatSuite community on Discord](https://discord.gg/aVXUqeEp3e)
-- Email us at [hi@natsuite.io](mailto:hi@natsuite.io)
+- [Get NatML](https://docs.natsuite.io/natml/#get-natml).
+- Join the [NatSuite community on Discord](https://discord.gg/y5vwgXkz2f).
+- Discuss [NatML on Unity Forums](https://forum.unity.com/threads/open-beta-natml-machine-learning-runtime.1109339/).
+- Contact us at [hi@natsuite.io](mailto:hi@natsuite.io).
 
 Thank you very much!

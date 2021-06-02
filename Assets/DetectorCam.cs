@@ -7,24 +7,23 @@ namespace NatSuite.Examples {
 
     using System.Collections.Generic;
     using UnityEngine;
-    using Devices;
-    using ML;
-    using ML.Vision;
-    using ML.Visualizers;
-    using ML.Extensions;
+    using NatSuite.Devices;
+    using NatSuite.ML;
+    using NatSuite.ML.Features;
+    using NatSuite.ML.Vision;
+    using NatSuite.ML.Visualizers;
+    using NatSuite.ML.Extensions;
 
     public class DetectorCam : MonoBehaviour {
-
-        [Header("ML")]
-        public MLModelData modelData;
 
         [Header("Visualization")]
         public MLDetectionVisualizer visualizer;
 
-        MLModel model;
-        MLAsyncPredictor<(string, Rect, float)[]> predictor;
         CameraDevice cameraDevice;
         Texture2D previewTexture;
+        MLModelData modelData;
+        MLModel model;
+        MLAsyncPredictor<(string, Rect, float)[]> predictor;
 
         async void Start () {
             // Request camera permissions
@@ -32,9 +31,6 @@ namespace NatSuite.Examples {
                 Debug.LogError(@"User did not grant camera permissions");
                 return;
             }
-            // Create async predictor
-            model = modelData.Deserialize();
-            predictor = new TinyYOLOv3Predictor(model, modelData.labels).ToAsync();
             // Get the default camera device
             var query = new MediaDeviceQuery(MediaDeviceCriteria.CameraDevice);
             cameraDevice = query.current as CameraDevice;
@@ -43,17 +39,24 @@ namespace NatSuite.Examples {
             previewTexture = await cameraDevice.StartRunning();
             // Display the camera preview
             visualizer.Render(previewTexture);
+            // Fetch the TinyYOLO detector
+            modelData = await MLModelData.FromHub("@natsuite/tiny-yolo-v3");
+            model = modelData.Deserialize();
+            predictor = new TinyYOLOv3Predictor(model, modelData.labels).ToAsync();
         }
 
         async void Update () {
-            // Check if the camera has started
-            if (!previewTexture)
+            // Check that the model has been downloaded
+            if (predictor == null)
                 return;
             // Check if the predictor is ready
             if (!predictor.readyForPrediction)
                 return;
             // Predict
-            var detections = await predictor.Predict(previewTexture);
+            var input = new MLImageFeature(previewTexture);
+            (input.mean, input.std) = modelData.normalization;
+            input.aspectMode = modelData.aspectMode;
+            var detections = await predictor.Predict(input);
             // Visualize
             var visualizations = new List<(Rect, string)>();
             foreach (var (label, rect, confidence) in detections) {
