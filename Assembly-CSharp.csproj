@@ -610,6 +610,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NatSuite.Devices.csproj">
+      <Project>{974acaed-8b0a-0731-a9a9-6949cc67bb3b}</Project>
+      <Name>NatSuite.Devices</Name>
+    </ProjectReference>
     <ProjectReference Include="NatSuite.ML.csproj">
       <Project>{5582fa2a-15d8-960d-4651-7e0942761731}</Project>
       <Name>NatSuite.ML</Name>
@@ -617,10 +621,6 @@
     <ProjectReference Include="NatSuite.ML.Editor.csproj">
       <Project>{04ef59a1-cf60-df5c-d92d-d2dd20f60787}</Project>
       <Name>NatSuite.ML.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NatSuite.Devices.csproj">
-      <Project>{974acaed-8b0a-0731-a9a9-6949cc67bb3b}</Project>
-      <Name>NatSuite.Devices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

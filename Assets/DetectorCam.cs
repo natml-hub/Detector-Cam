@@ -40,6 +40,7 @@ namespace NatSuite.Examples {
             // Display the camera preview
             visualizer.Render(previewTexture);
             // Fetch the TinyYOLO detector
+            Debug.Log("Fetching model from NatML Hub");
             modelData = await MLModelData.FromHub("@natsuite/tiny-yolo-v3");
             model = modelData.Deserialize();
             predictor = new TinyYOLOv3Predictor(model, modelData.labels).ToAsync();
