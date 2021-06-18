@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.ML", "NatSuite.ML.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{b13ec436-33d4-a199-c3e4-9b450027a4bf}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.ML.Vision.TinyYOLOv3", "NatSuite.ML.Vision.TinyYOLOv3.csproj", "{585301e8-0548-ce6e-b121-fef9ade4ecad}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatSuite.ML.Editor", "NatSuite.ML.Editor.csproj", "{04ef59a1-cf60-df5c-d92d-d2dd20f60787}"
 EndProject
 Global
@@ -20,6 +22,8 @@ Global
 		{5582fa2a-15d8-960d-4651-7e0942761731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b13ec436-33d4-a199-c3e4-9b450027a4bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b13ec436-33d4-a199-c3e4-9b450027a4bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585301e8-0548-ce6e-b121-fef9ade4ecad}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585301e8-0548-ce6e-b121-fef9ade4ecad}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04ef59a1-cf60-df5c-d92d-d2dd20f60787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04ef59a1-cf60-df5c-d92d-d2dd20f60787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

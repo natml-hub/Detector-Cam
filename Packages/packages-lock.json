@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.natsuite.ml.detector": {
-      "version": "git+https://github.com/natsuite/ML-Detector",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "35a8b70f4ec7a746cb38371a16030223c07f685f"
-    },
     "com.natsuite.natshare": {
       "version": "git+https://github.com/natsuite/NatShare",
       "depth": 0,

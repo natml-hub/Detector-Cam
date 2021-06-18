@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5582fa2a-15d8-960d-4651-7e0942761731}</ProjectGuid>
+    <ProjectGuid>{585301e8-0548-ce6e-b121-fef9ade4ecad}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>NatSuite.ML</AssemblyName>
+    <AssemblyName>NatSuite.ML.Vision.TinyYOLOv3</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,31 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Extensions\MLAsyncPredictor.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Extensions\MLPredictorExtensions.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Features\MLArrayFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Features\MLDictionaryFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Features\MLImageFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Features\MLSequenceFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Hub\INMLReporter.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Hub\NMLHub.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\Bridge.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\IMLFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\IMLModel.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\IMLPredictor.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\NMLTypes.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Internal\NMLUtility.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\MLFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\MLFeatureType.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\MLModel.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\MLModelData.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Types\MLArrayType.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Types\MLDictionaryType.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Types\MLImageType.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Types\MLSequenceFeature.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Vision\MLClassificationPredictor.cs" />
-     <Compile Include="Assets\NatSuite\NatML\Runtime\Vision\MLDenseClassificationPredictor.cs" />
-     <None Include="Assets\NatSuite\NatML\Runtime\NatSuite.ML.asmdef" />
+     <Compile Include="Assets\NatSuite\ML\tiny-yolo-v3\Runtime\MLDetectionRect.cs" />
+     <Compile Include="Assets\NatSuite\ML\tiny-yolo-v3\Runtime\MLDetectionVisualizer.cs" />
+     <Compile Include="Assets\NatSuite\ML\tiny-yolo-v3\Runtime\TinyYOLOv3Predictor.cs" />
+     <None Include="Assets\NatSuite\ML\tiny-yolo-v3\Runtime\NatSuite.ML.Vision.TinyYOLOv3.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -621,6 +600,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NatSuite.ML.csproj">
+      <Project>{5582fa2a-15d8-960d-4651-7e0942761731}</Project>
+      <Name>NatSuite.ML</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.natsuite.ml.detector": "git+https://github.com/natsuite/ML-Detector",
     "com.natsuite.natshare": "git+https://github.com/natsuite/NatShare",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.2.1",

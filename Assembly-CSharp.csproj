@@ -578,9 +578,6 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>/Users/yusuf/Documents/Projects/Detector-Cam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="NatSuite.ML.Vision.Detector">
-        <HintPath>/Users/yusuf/Documents/Projects/Detector-Cam/Library/ScriptAssemblies/NatSuite.ML.Vision.Detector.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/yusuf/Documents/Projects/Detector-Cam/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -621,6 +618,10 @@
     <ProjectReference Include="NatSuite.ML.Editor.csproj">
       <Project>{04ef59a1-cf60-df5c-d92d-d2dd20f60787}</Project>
       <Name>NatSuite.ML.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NatSuite.ML.Vision.TinyYOLOv3.csproj">
+      <Project>{585301e8-0548-ce6e-b121-fef9ade4ecad}</Project>
+      <Name>NatSuite.ML.Vision.TinyYOLOv3</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

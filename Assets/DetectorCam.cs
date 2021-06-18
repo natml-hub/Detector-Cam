@@ -5,7 +5,6 @@
 
 namespace NatSuite.Examples {
 
-    using System.Collections.Generic;
     using UnityEngine;
     using NatSuite.Devices;
     using NatSuite.ML;
@@ -23,7 +22,7 @@ namespace NatSuite.Examples {
         Texture2D previewTexture;
         MLModelData modelData;
         MLModel model;
-        MLAsyncPredictor<(string, Rect, float)[]> predictor;
+        MLAsyncPredictor<(Rect, string, float)[]> predictor;
 
         async void Start () {
             // Request camera permissions
@@ -59,12 +58,7 @@ namespace NatSuite.Examples {
             input.aspectMode = modelData.aspectMode;
             var detections = await predictor.Predict(input);
             // Visualize
-            var visualizations = new List<(Rect, string)>();
-            foreach (var (label, rect, confidence) in detections) {
-                var visualizationText = $"{label}: {confidence:0.##}";
-                visualizations.Add((rect, visualizationText));
-            }
-            visualizer.Render(previewTexture, visualizations.ToArray());
+            visualizer.Render(previewTexture, detections);
         }
 
         void OnDisable () {

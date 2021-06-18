@@ -2,11 +2,12 @@
 
 ![cows](.media/cows.png)
 
-This is an example project which integrates the NatML machine learning runtime with the NatDevice media device API for realtime object detection in Unity Engine. This project uses the [TinyYOLO v3](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov3) architecture.
+Realtime object detection in Unity Engine with NatML. This project uses the [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/model/natsuite/tiny-yolo-v3) package from NatML Hub.
 
 ## Requirements
 - Unity 2019.2+
-- [ML Detector 1.0+](https://github.com/natsuite/ML-Detector)
+- NatML 1.0.0+
+- [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/model/natsuite/tiny-yolo-v3)
 - [NatDevice 1.1+](https://assetstore.unity.com/packages/tools/integration/natdevice-media-device-api-162053)
 - [NatShare 1.2+](https://github.com/natsuite/NatShare)
 
