@@ -2,12 +2,12 @@
 
 ![cows](.media/cows.png)
 
-Realtime object detection in Unity Engine with NatML. This project uses the [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/model/natsuite/tiny-yolo-v3) package from NatML Hub.
+Realtime object detection in Unity Engine with NatML. This project uses the [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/predictor/@natsuite/tiny-yolo-v3) package from NatML Hub.
 
 ## Requirements
 - Unity 2019.2+
 - NatML 1.0.0+
-- [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/model/natsuite/tiny-yolo-v3)
+- [@natsuite/tiny-yolo-v3](https://hub.natsuite.io/predictor/@natsuite/tiny-yolo-v3)
 - [NatDevice 1.1+](https://assetstore.unity.com/packages/tools/integration/natdevice-media-device-api-162053)
 - [NatShare 1.2+](https://github.com/natsuite/NatShare)
 
