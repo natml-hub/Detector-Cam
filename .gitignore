@@ -7,6 +7,10 @@ obj/
 Assets/NatSuite/
 Assets/NatSuite.meta
 
+# Predictor packages
+Assets/ML/
+Assets/ML.meta
+
 # IDE
 .vscode/
 .gradle/
